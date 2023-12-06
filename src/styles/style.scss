@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'vendor/reset';
+@import 'layout/mobile';
+
+@media screen and (min-width: 768px) {
+  @import 'layout/tablet';
+}
+
+@media screen and (min-width: 1240px) {
+  @import 'layout/desktop';
+}
