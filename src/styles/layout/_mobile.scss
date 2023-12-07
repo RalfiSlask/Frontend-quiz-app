@@ -1,3 +1,11 @@
+$debugging: true;
+
+div {
+  @if $debugging {
+    outline: 1px solid hotpink;
+  }
+}
+
 .Heading-L {
   @apply font-Rubik font-light leading-none text-[4rem];
 }

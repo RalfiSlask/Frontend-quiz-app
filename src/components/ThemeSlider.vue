@@ -5,6 +5,7 @@
       alt="sun icon"
       width="16"
       height="16"
+      class="md:w-[21px] md:h-[21px] xl:w-6 xl:h-6"
     />
     <input type="range" min="1" max="2" value="2" />
     <img
@@ -12,6 +13,7 @@
       alt="moon icon"
       width="16"
       height="16"
+      class="md:w-[21px] md:h-[21px] xl:w-6 xl:h-6"
     />
   </div>
 </template>
