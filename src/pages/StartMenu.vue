@@ -12,7 +12,13 @@
       <p class="text-[14px] md:text-[20px] italic leading-[150%]">
         Pick a subject to get started
       </p>
-      <p>{{ quizzes }}</p>
+      <ul>
+        <SubjectContainer
+          v-for="quiz in quizzes"
+          :title="quiz.title"
+          :icon="quiz.icon"
+        />
+      </ul>
     </main>
   </div>
 </template>
@@ -20,16 +26,17 @@
 <script lang="ts">
 import data from '../json/data.json';
 import ThemeSlider from '../components/ThemeSlider.vue';
-const quizzes = data.quizzes[0].title;
+import SubjectContainer from '../components/SubjectContainer.vue';
 export default {
   name: 'StartMenu',
   data() {
     return {
-      quizzes: quizzes
+      quizzes: data.quizzes
     };
   },
   components: {
-    ThemeSlider
+    ThemeSlider,
+    SubjectContainer
   }
 };
 </script>
