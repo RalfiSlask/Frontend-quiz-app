@@ -6,7 +6,7 @@
       <ThemeSlider />
     </header>
     <main>
-      <h1 class="text-[40px] font-light md:Heading-L">
+      <h1 class="text-[40px] font-light Title">
         Welcome to the <span class="font-medium">Frontend Quiz!</span>
       </h1>
       <p class="text-[14px] md:text-[20px] italic leading-[150%]">
@@ -17,28 +17,20 @@
           v-for="quiz in quizzes"
           :title="quiz.title"
           :icon="quiz.icon"
+          :color="quiz.color"
         />
       </ul>
     </main>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import data from '../json/data.json';
 import ThemeSlider from '../components/ThemeSlider.vue';
 import SubjectContainer from '../components/SubjectContainer.vue';
-export default {
-  name: 'StartMenu',
-  data() {
-    return {
-      quizzes: data.quizzes
-    };
-  },
-  components: {
-    ThemeSlider,
-    SubjectContainer
-  }
-};
+import { ref } from 'vue';
+
+const quizzes = ref(data.quizzes);
 </script>
 
 <style scoped></style>

@@ -6,18 +6,10 @@ div {
   }
 }
 
-.Heading-L {
-  @apply font-Rubik font-light leading-none text-[4rem];
+.Title {
+  @apply font-Rubik text-[2.5rem] md:text-[4rem] font-light;
 }
 
-.Heading-M {
-  @apply font-Rubik font-medium leading-[120%];
-}
-
-.Heading-S {
-  @apply font-Rubik font-medium text-lg;
-}
-
-.Body-S {
-  @apply font-Rubik text-xl;
+.Container {
+  @apply font-Rubik font-medium text-[1.125rem] md:text-[1.75rem];
 }
